@@ -1,4 +1,4 @@
-utils.define('jqtag.switch').extend('jqtag').as(function(test,_test_, _attr_){
+utils.define('jqtags.switch').extend('jqtag').as(function(test,_test_, _attr_){
 	
 	test.register({
 	    tagName: "jq-switch",
