@@ -1,14 +1,12 @@
 {
-    "name": "jqgeeks/jqtag",
-    "type": "library",
-    "description": "JQuery Utilitties compatible with rudrax framework",
-    "keywords": ["rudra", "API"],
+    "name": "jqtags/jq-switch",
+    "type": "tag",
+    "description": "fancy switch/checkbox button",
+    "keywords": ["x-tag", "polymer", "pitana"],
     "license": "MIT",
 
-
     "require": {
-      "jqgeeks/utils" : ">=1.1.3",
-      "webmodules/webcomponentsjs" : ">=0.5.2"
+      "jqgeeks/jqtag" : ">=0.0.0"
     }
     
 }
