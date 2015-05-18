@@ -1,7 +1,7 @@
 {
-    "name": "jqtags/jq-switch",
+    "name": "jqtags/jq-slider",
     "type": "tag",
-    "description": "fancy switch/checkbox button",
+    "description": "fancy bootstrap slider",
     "keywords": ["x-tag", "polymer", "pitana"],
     "license": "MIT",
 
