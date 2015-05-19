@@ -1,7 +1,7 @@
 {
-    "name": "jqtags/jq-slider",
+    "name": "jqtags/jq-tab",
     "type": "tag",
-    "description": "fancy bootstrap slider",
+    "description": "fancy bootstrap tab",
     "keywords": ["x-tag", "polymer", "pitana"],
     "license": "MIT",
 
