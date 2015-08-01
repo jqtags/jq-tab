@@ -5,7 +5,7 @@
 	"description": "Extension api to jQuery",
 	"keywords": ["x-tag", "pitana", "jquery"],
 	"dependencies": {
-		"jqgeeks-jqtag": ">=0.0.1",
+		"webmodules-jqtag": ">=0.0.1",
 		"jqmodules-jq2much": ">=0.0.2"
 	},
 	"license": "MIT"

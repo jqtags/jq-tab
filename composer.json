@@ -6,7 +6,7 @@
     "license": "MIT",
 
     "require": {
-      "jqgeeks/jqtag" : ">=0.0.1",
+      "webmodules/jqtag" : ">=0.0.1",
       "jqmodules/jq2much" : ">=0.0.2"
     }
     
