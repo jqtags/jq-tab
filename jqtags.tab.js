@@ -3,7 +3,6 @@ _tag_('jqtags.tab',function(test){
 	var $ = _module_("jQuery");
 	var $tabHeaders,$tabBodies,$selectedHeader,$selectedBody;
 	var $this, $jqTab;
-	_require_("jq2much");
 	
 	return {
 	    tagName: "jq-tab",

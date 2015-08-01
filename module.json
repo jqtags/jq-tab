@@ -1,14 +1,11 @@
 {
-	"name" : "jqtags/jq-slider",
-	"modules" : [
-		{
-			"name" : "jqtags/jq-slider",
-			"js" : [
-				"jqtags.slider.js"
-			],
-			"css" : [],
-			"dependsOn" : []
-		}
-	]
-
+	"name": "jqtags/jq-tab",
+	"jqtags/jq-tab": {
+		"js": ["jqtags.tab.js"],
+		"on": ["webmodules/jqtags", "jqmodules/jq2much"]
+	},
+	"jqtags/jq-tab/css": {
+		"js": ["jqtags.tab.css"],
+		"on": ["webmodules/jqtags"]
+	}
 }
