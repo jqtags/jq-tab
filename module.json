@@ -5,7 +5,7 @@
 		"on": ["webmodules/jqtags", "jqmodules/jq2much"]
 	},
 	"jqtags/jq-tab/css": {
-		"js": ["jqtags.tab.css"],
+		"css": ["jqtags.tab.css"],
 		"on": ["webmodules/jqtags"]
 	}
 }
