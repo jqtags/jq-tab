@@ -2,10 +2,10 @@
 	"name": "jqtags/jq-tab",
 	"jqtags/jq-tab": {
 		"js": ["jqtags.tab.js"],
-		"on": ["webmodules/jqtags", "jqmodules/jq2much"]
+		"on": ["webmodules/jqtag", "jqmodules/jq2much"]
 	},
 	"jqtags/jq-tab/css": {
 		"css": ["jqtags.tab.css"],
-		"on": ["webmodules/jqtags"]
+		"on": ["webmodules/jqtag"]
 	}
 }
