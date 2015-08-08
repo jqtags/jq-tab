@@ -1,4 +1,5 @@
 jq-tab{
+  display: block;
   jq-tab-heads {
     width: 100%;
     height: 49px;
@@ -8,6 +9,7 @@ jq-tab{
     border-bottom: 1px solid #c7cccd;
     display: block;
     position: static;
+
     &::after{
       clear: both;
       display: block;
@@ -47,5 +49,61 @@ jq-tab{
   }
   jq-tab-next,jq-tab-prev{
     display : block;
+  }
+}
+
+
+jq-tab[slider][slider][slider] {
+
+  jq-tab-heads{
+    -webkit-transition:background-size .1s;
+    background: -webkit-linear-gradient(rgba(21,164,250,1) 1%, rgba(21,164,250,1) 100%);
+    background: -moz-linear-gradient(rgba(21,164,250,1) 1%, rgba(21,164,250,1) 100%);
+    background: -o-linear-gradient(rgba(21,164,250,1) 1%, rgba(21,164,250,1) 100%);
+    background: linear-gradient(rgba(21,164,250,1) 1%, rgba(21,164,250,1) 100%);
+    background-size:0;
+    background-position:0 0;
+    background-repeat:no-repeat;
+  }
+
+  jq-tab-heads > jq-tab-head,
+  jq-tab-heads > jq-tab-head:hover,
+  jq-tab-heads > jq-tab-head:focus{
+    background:none;
+    color:inherit;
+    -webkit-user-select: none;  /* Chrome all / Safari all */
+    -moz-user-select: none;     /* Firefox all */
+    -ms-user-select: none;
+  }
+
+  jq-tab-heads > jq-tab-head[active]{
+    background-position:0 0;
+    background-repeat:no-repeat;
+    -webkit-animation:jqTab .1s;
+  }
+
+  jq-tab-heads > jq-tab-head {
+    display:inline-block!important;
+    white-space:nowrap;
+  }
+
+  jq-tab-head{
+    border: 0px solid #15a4fa;
+    padding: 0;
+    margin: 5px;
+    top: 5px;
+  }
+
+}
+@-webkit-keyframes jqTab{
+  0%{
+    background-position:-50px;
+    background-size:0;
+    background-position:center 50px;
+  }
+  100%{
+    background-position:0;
+    background-size:200px;
+    background-position:center center;
   }
 }

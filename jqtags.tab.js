@@ -3,6 +3,7 @@ _tag_('jqtags.tab',function(test){
 	var $ = _module_("jQuery");
 	var $tabHeaders,$tabBodies,$selectedHeader,$selectedBody;
 	var $this, $jqTab;
+  var DEFAULT_SLIDER_HEIGHT = "5";
 	
 	return {
 	    tagName: "jq-tab",
@@ -16,7 +17,11 @@ _tag_('jqtags.tab',function(test){
 	            type: "string",
 	            default : "",
 	            onChange : "setValue"
-	        }
+	        },
+          slider : {
+            type : "string",
+            default : false
+          }
 	    },	
 	    attachedCallback: function () {
 	    	var self = this;
@@ -40,13 +45,14 @@ _tag_('jqtags.tab',function(test){
 	    	
 	    	$selectedBody= $tabBodies.filter("[tab='"+this.$.value+"']");
 	    	$selectedBody.removeAttr("hidden");
-	    	
+        this.sliderMatch($selectedHeader); //TODO:-
 	    },
 	    selectTab : function(e,target){
 	    	$this = $(this.$);
 	    	$jqTab = $(target).closest("jq-tab");
 	    	if($jqTab[0]===this.$){
-		    	this.$.value = target.getAttribute("value");
+          var $target = $(target)
+		    	this.$.value = $target.attr("value");
 		    	this.setValue();
 		    	this.trigger("change");
 	    	}
@@ -72,7 +78,26 @@ _tag_('jqtags.tab',function(test){
 	    			return this.selectTab(e,selectedHeader);
 	    		}
 	    	}
-	    }
+	    },
+      ////
+      sliderMatch : debounce(function(el){
+        this.matchBGSize(el);
+        this.bgPos(el);
+      },100),
+      matchBGSize : function (el) {
+        var activeW = el.width();
+        this.findSafe("jq-tab-heads").css({
+          "background-size": activeW + "px "+(this.$.slider || DEFAULT_SLIDER_HEIGHT)+"px"
+        });
+      },
+      bgPos : function(el){
+        var offset = el.position().left;
+        corrections = el.parent().offset().left;
+        offset = offset - corrections;
+        this.findSafe("jq-tab-heads").animate({
+          "background-position": offset + "px"
+        });
+      }
 	};
 	
 });
