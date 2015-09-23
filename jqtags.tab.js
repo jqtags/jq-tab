@@ -10,7 +10,7 @@ _tag_('jqtags.tab', function (test) {
     events: {
       "click jq-tab-head": "selectTab",
       "click jq-tab-next": "selectNextTab",
-      "click jq-tab-prev": "selectPrevTab",
+      "click jq-tab-prev": "selectPrevTab"
     },
     accessors: {
       value: {
@@ -47,6 +47,7 @@ _tag_('jqtags.tab', function (test) {
       $selectedBody.removeAttr("hidden");
       //console.log("this.$.slider",this.$.slider)
       if (this.$.slider !== false) {
+        console.error("thising..", this.$);
         this.sliderMatch($selectedHeader); //TODO:-
       }
     },
@@ -82,10 +83,11 @@ _tag_('jqtags.tab', function (test) {
         }
       }
     },
-    sliderMatch: debounce(function (el) {
+    sliderMatch: debounce(function sliderMatch(el) {
+      $this = $(this.$);
       this.matchBGSize(el);
       this.bgPos(el);
-    }, 100),
+    }, 100, undefined, "sliderMatch"),
     matchBGSize: function (el) {
       var activeW = el.width();
       this.findSafe("jq-tab-heads").css({
@@ -96,7 +98,7 @@ _tag_('jqtags.tab', function (test) {
       var offset = el.position().left;
       corrections = el.parent().offset().left;
       offset = offset - corrections;
-      this.findSafe("jq-tab-heads").animate({
+      this.findSafe("bgPos:jq-tab-heads").animate({
         "background-position": offset + "px"
       });
     }
