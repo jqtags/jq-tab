@@ -1,12 +1,13 @@
 {
-	"name": "jqtags-jq-tab",
-	"main": "jatags.tab.js",
-	"authors": ["Lalit Tanwar <lalit.tanwar07@gmail.com>"],
-	"description": "Extension api to jQuery",
-	"keywords": ["x-tag", "pitana", "jquery"],
-	"dependencies": {
-		"webmodules-jqtag": ">=0.0.1",
-		"jqmodules-jq2much": ">=0.0.2"
-	},
-	"license": "MIT"
+  "name": "jqtags-jq-tab",
+  "main": "jatags.tab.js",
+  "authors": ["Lalit Tanwar <lalit.tanwar07@gmail.com>"],
+  "description": "Extension api to jQuery",
+  "keywords": ["x-tag", "pitana", "jquery"],
+  "dependencies": {
+    "webmodules-foo": ">=3.1.3",
+    "webmodules-jqtag": ">=0.0.1",
+    "jqmodules-jq2much": ">=0.0.2"
+  },
+  "license": "MIT"
 }
