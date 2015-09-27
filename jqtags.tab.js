@@ -47,7 +47,6 @@ _tag_('jqtags.tab', function (test) {
       $selectedBody.removeAttr("hidden");
       //console.log("this.$.slider",this.$.slider)
       if (this.$.slider !== false) {
-        console.error("thising..", this.$);
         this.sliderMatch($selectedHeader); //TODO:-
       }
     },
@@ -55,7 +54,7 @@ _tag_('jqtags.tab', function (test) {
       $this = $(this.$);
       $jqTab = $(target).closest("jq-tab");
       if ($jqTab[0] === this.$) {
-        var $target = $(target)
+        var $target = $(target);
         this.$.value = $target.attr("value");
         this.setValue();
         this.trigger("change");
@@ -96,9 +95,9 @@ _tag_('jqtags.tab', function (test) {
     },
     bgPos: function (el) {
       var offset = el.position().left;
-      corrections = el.parent().offset().left;
+      var corrections = el.parent().offset().left;
       offset = offset - corrections;
-      this.findSafe("bgPos:jq-tab-heads").animate({
+      this.findSafe("jq-tab-heads").animate({
         "background-position": offset + "px"
       });
     }
