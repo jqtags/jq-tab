@@ -53,7 +53,8 @@ _tag_('jqtags.tab', function (test) {
     selectTab: function (e, target) {
       $this = $(this.$);
       $jqTab = $(target).closest("jq-tab");
-      if ($jqTab[0] === this.$) {
+      console.log("$jqTab", $jqTab);
+      if ($jqTab[0] === this.$ && !target.hasAttribute("disabled")) {
         var $target = $(target);
         this.$.value = $target.attr("value");
         this.setValue();
