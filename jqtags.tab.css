@@ -112,3 +112,12 @@ jq-tab[slider][slider][slider] jq-tab-head {
         background-position: center center;
     }
 }
+jq-tab-heads jq-tab-menu jq-tab-head{
+    display: none;
+}
+jq-tab-heads jq-tab-menu jq-tab-head[active]{
+    display: inline-block;
+}
+jq-tab-heads jq-tab-menu:hover jq-tab-head,jq-tab-heads jq-tab-menu *:hover{
+    display: inline-block;
+}
