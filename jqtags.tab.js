@@ -1,4 +1,4 @@
-_tag_('jqtags.tab', function (test) {
+_tag_('jqtags.tab', function (tab) {
 
   var $ = _module_("jQuery");
   var $tabHeaders, $tabBodies, $selectedHeader, $selectedBody;
@@ -58,7 +58,9 @@ _tag_('jqtags.tab', function (test) {
         var $target = $(target);
         this.$.value = $target.attr("value");
         this.setValue();
-        this.trigger("change");
+          //this.trigger("change");
+        tab.trigger(this.$,"input");
+        tab.trigger(this.$,"change");
       }
     },
     selectNextTab: function (e, target) {
